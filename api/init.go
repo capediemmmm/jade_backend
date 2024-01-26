@@ -29,7 +29,7 @@ func StartServer() error {
 
 	// 使用cors中间件
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:8000"}
+	config.AllowOrigins = []string{"http://localhost:8000","http://localhost:8080"}
 	config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}
 	config.AllowHeaders = []string{"Origin", "Content-Type", "Authorization"}
 	config.AllowCredentials = true

@@ -19,3 +19,16 @@ func (w *JadeCtlWrapper) GetAllJade(c *gin.Context) {
 	}
 	dto.ResponseSuccess(c, resp)
 }
+func (w *JadeCtlWrapper) ModifyJade(c *gin.Context) {
+	var req dto.JadeModifyReq
+	if err := dto.BindReq(c, &req); err != nil {
+		dto.ResponseFail(c, err)
+		return
+	}
+	err := w.ctl.ModifyJade(c,&req)
+	if err != nil {
+		dto.ResponseFail(c, err)
+		return
+	}
+	dto.ResponseSuccess(c, "Modify jade information successfully!")
+}

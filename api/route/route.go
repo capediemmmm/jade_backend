@@ -22,4 +22,5 @@ func SetupJadeController(r *gin.RouterGroup) {
 	}
 	p := r.Group("/jade")
 	p.GET("/list", lcw.GetAllJade)
+	p.POST("/modify",lcw.ModifyJade)
 }
