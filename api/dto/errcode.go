@@ -12,7 +12,7 @@ const (
 	ErrUserNotFound stacktrace.ErrorCode = 4
 
 	ErrShortLinkExist stacktrace.ErrorCode = 5
-	ErrNoShortLink    stacktrace.ErrorCode = 6
+	ErrNoJade         stacktrace.ErrorCode = 6
 	ErrPrivilege      stacktrace.ErrorCode = 7
 
 	ErrShortLinkActive stacktrace.ErrorCode = 8

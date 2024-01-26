@@ -33,7 +33,7 @@ func (c *JadeController) GetAllJade(ctx *gin.Context) (*dto.JadeGetListResp, err
 	result := dbQuery.Find(&Jades).Count(&total)
 
 	if result.Error != nil {
-		return nil, stacktrace.PropagateWithCode(result.Error, dto.ErrNoShortLink, "Jade not found in database")
+		return nil, stacktrace.PropagateWithCode(result.Error, dto.ErrNoJade, "Jade not found in database")
 	}
 
 	var mappedJades []dto.JadeGetResponse
