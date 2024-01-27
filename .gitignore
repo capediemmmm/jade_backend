@@ -15,3 +15,5 @@ config.yaml
 *.py
 *.png
 *.txt
+*.xlsx
+*.zip
